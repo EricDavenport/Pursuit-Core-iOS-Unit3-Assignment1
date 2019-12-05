@@ -18,6 +18,7 @@
 		5874F75F2399A72800164636 /* AppleStockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5874F75E2399A72800164636 /* AppleStockData.swift */; };
 		5874F7672399AB4700164636 /* PeopleAndAppleStockPricesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5874F7662399AB4700164636 /* PeopleAndAppleStockPricesTests.swift */; };
 		5874F76F2399ABE200164636 /* Bundle+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5874F76E2399ABE200164636 /* Bundle+Extensions.swift */; };
+		588B04EE2399BCEE0000BEE7 /* UserInfoDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588B04ED2399BCEE0000BEE7 /* UserInfoDetailVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		5874F7662399AB4700164636 /* PeopleAndAppleStockPricesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleAndAppleStockPricesTests.swift; sourceTree = "<group>"; };
 		5874F7682399AB4700164636 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5874F76E2399ABE200164636 /* Bundle+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extensions.swift"; sourceTree = "<group>"; };
+		588B04ED2399BCEE0000BEE7 /* UserInfoDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoDetailVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				577E5BED21BA8BA10083EB97 /* UserInfoViewController.swift */,
+				588B04ED2399BCEE0000BEE7 /* UserInfoDetailVC.swift */,
 				577E5BEF21BA8BA10083EB97 /* Main.storyboard */,
 				5874F75C2399A71300164636 /* UserInfoData.swift */,
 				5874F75E2399A72800164636 /* AppleStockData.swift */,
@@ -230,6 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				588B04EE2399BCEE0000BEE7 /* UserInfoDetailVC.swift in Sources */,
 				577E5BEE21BA8BA10083EB97 /* UserInfoViewController.swift in Sources */,
 				5874F76F2399ABE200164636 /* Bundle+Extensions.swift in Sources */,
 				5874F75D2399A71300164636 /* UserInfoData.swift in Sources */,

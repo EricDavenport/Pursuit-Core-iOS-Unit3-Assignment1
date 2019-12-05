@@ -36,7 +36,7 @@ extension PeopleAndAppleStockPricesTests {
     return data
   }
   
-  func getUsers() -> [Users]{
+  func getUsers() -> [User]{
     let users = UserInfoData.getUserInfo()
     return users
   }

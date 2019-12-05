@@ -11,10 +11,10 @@ import UIKit
 
 struct UserInfoData: Decodable {
   
-  var results: [Users]
+  var results: [User]
 }
 
-struct Users: Decodable {
+struct User: Decodable {
   var gender: String
   var name: Name
   var location: Location
@@ -30,6 +30,11 @@ struct Name: Decodable {
   var title: String
   var first: String
   var last: String
+  
+  func fullName(user: User) -> String {
+    let fullname = "\(user.name.title) \(user.name.first) \(user.name.last)"
+    return fullname
+  }
 }
 
 struct Location: Decodable {
@@ -51,8 +56,8 @@ struct Picture: Decodable {
 
 extension UserInfoData {
   
-  static func getUserInfo() -> [Users] {
-    var users = [Users]()
+  static func getUserInfo() -> [User] {
+    var users = [User]()
     
     guard let fileURL = Bundle.main.url(forResource: "userinfo", withExtension: "json") else {
       fatalError("failed to locate json file.")

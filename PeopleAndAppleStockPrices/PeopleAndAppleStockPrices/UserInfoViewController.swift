@@ -12,39 +12,52 @@ class UserInfoViewController: UIViewController {
   
   @IBOutlet weak var tableView: UITableView!
   
-  var users = [Users]() {
+  var users = [User]() {
     didSet {
       tableView.reloadData()
     }
   }
-
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     tableView.dataSource = self
     loadData()
+    navigationItem.title = "Users"
+  }
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    guard let detailViewController = segue.destination as? UserInfoDetailVC,
+      let indexPath = tableView.indexPathForSelectedRow else {
+        fatalError("Unable to segue properly")
+        
+    }
+    let user = users[indexPath.row]
+    
+    detailViewController.currentUser = user
+    
   }
   
   func loadData() {
     users = UserInfoData.getUserInfo().sorted {$0.name.first < $1.name.first}
   }
   
-    func loadImage(imageURL: String) -> UIImage {
-      var image: UIImage
-      guard let url = URL(string: imageURL) else {
-        fatalError("bad url: \(imageURL)")
-      }
-      
-      do {
-        let imageData = try Data(contentsOf: url)
-        image = UIImage(data: imageData)!
-      } catch {
-        fatalError("\(error)")
-      }
-      return image
+  func loadImage(imageURL: String) -> UIImage {
+    var image: UIImage
+    guard let url = URL(string: imageURL) else {
+      fatalError("bad url: \(imageURL)")
+    }
+    
+    do {
+      let imageData = try Data(contentsOf: url)
+      image = UIImage(data: imageData)!
+    } catch {
+      fatalError("\(error)")
+    }
+    return image
   }
-
-
-
+  
+  
+  
 }
 
 extension UserInfoViewController: UITableViewDataSource {
