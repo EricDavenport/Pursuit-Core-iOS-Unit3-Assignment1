@@ -27,12 +27,9 @@ struct AppleStocks: Decodable {
   let changeOverTime: Double
 }
 
-//func dateFormatter() -> Date {
-//  let formatter = DateFormatter()
-//}
-
 
 extension AppleStocks {
+  
   static func getStocks() -> [AppleStocks] {
     var stocks = [AppleStocks]()
     
@@ -51,4 +48,42 @@ extension AppleStocks {
     }
     return stocks
   }
+  
+  static func getSections() -> [[AppleStocks]] {
+    
+    let applStocks = getStocks()
+    
+    var dateLabel = Set<String>()
+    
+    for stock in applStocks {
+      
+      var stockDate = stock.label
+      var refactoredDate = stockDate.components(separatedBy: " ")
+      refactoredDate.remove(at: 1)
+      stockDate = refactoredDate.joined()
+      dateLabel.insert(stockDate)
+    }
+    
+    var sectionsArr = Array(repeating: [AppleStocks](), count: dateLabel.count)
+    print(dateLabel.count)
+    var currentIndex = 0
+    
+    var currentMonth = applStocks.first?.label.components(separatedBy: " ").first ?? ""
+    
+    for stock in applStocks {
+      let month = stock.label.components(separatedBy: " ").first ?? ""
+      
+      if month == currentMonth {
+        sectionsArr[currentIndex].append(stock)
+        
+      } else {
+        currentIndex += 1
+        currentMonth = stock.label.components(separatedBy: " ").first ?? ""
+        sectionsArr[currentIndex].append(stock)
+      }
+    }
+    return sectionsArr
+    
+  }
 }
+

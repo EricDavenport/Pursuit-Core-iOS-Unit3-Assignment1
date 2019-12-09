@@ -20,6 +20,7 @@
 		5874F7672399AB4700164636 /* PeopleAndAppleStockPricesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5874F7662399AB4700164636 /* PeopleAndAppleStockPricesTests.swift */; };
 		5874F76F2399ABE200164636 /* Bundle+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5874F76E2399ABE200164636 /* Bundle+Extensions.swift */; };
 		588B04EE2399BCEE0000BEE7 /* UserInfoDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588B04ED2399BCEE0000BEE7 /* UserInfoDetailVC.swift */; };
+		58D7430D239EE2A2004600B2 /* StocksDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D7430C239EE2A2004600B2 /* StocksDetailVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		5874F7682399AB4700164636 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5874F76E2399ABE200164636 /* Bundle+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extensions.swift"; sourceTree = "<group>"; };
 		588B04ED2399BCEE0000BEE7 /* UserInfoDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoDetailVC.swift; sourceTree = "<group>"; };
+		58D7430C239EE2A2004600B2 /* StocksDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksDetailVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,12 +93,13 @@
 		577E5BEA21BA8BA10083EB97 /* PeopleAndAppleStockPrices */ = {
 			isa = PBXGroup;
 			children = (
-				577E5BED21BA8BA10083EB97 /* UserInfoViewController.swift */,
-				577E5BEF21BA8BA10083EB97 /* Main.storyboard */,
-				588B04ED2399BCEE0000BEE7 /* UserInfoDetailVC.swift */,
 				5874F75C2399A71300164636 /* UserInfoData.swift */,
+				577E5BED21BA8BA10083EB97 /* UserInfoViewController.swift */,
+				588B04ED2399BCEE0000BEE7 /* UserInfoDetailVC.swift */,
+				577E5BEF21BA8BA10083EB97 /* Main.storyboard */,
 				580D19A3239AE59900F40553 /* AppleStockData.swift */,
 				580C5A44239AF26E00787868 /* StocksViewController.swift */,
+				58D7430C239EE2A2004600B2 /* StocksDetailVC.swift */,
 				5874F76E2399ABE200164636 /* Bundle+Extensions.swift */,
 				577E5BFD21BA8BE20083EB97 /* Supporting Files */,
 				577E5BF721BA8BA20083EB97 /* Info.plist */,
@@ -238,6 +241,7 @@
 			files = (
 				580C5A45239AF26E00787868 /* StocksViewController.swift in Sources */,
 				588B04EE2399BCEE0000BEE7 /* UserInfoDetailVC.swift in Sources */,
+				58D7430D239EE2A2004600B2 /* StocksDetailVC.swift in Sources */,
 				577E5BEE21BA8BA10083EB97 /* UserInfoViewController.swift in Sources */,
 				580D19A4239AE59900F40553 /* AppleStockData.swift in Sources */,
 				5874F76F2399ABE200164636 /* Bundle+Extensions.swift in Sources */,

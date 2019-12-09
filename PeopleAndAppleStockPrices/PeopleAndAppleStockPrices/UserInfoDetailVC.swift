@@ -30,7 +30,7 @@ class UserInfoDetailVC: UIViewController {
     guard let url = URL(string: imageURL) else {
       fatalError("bad url: \(imageURL)")
     }
-    
+     
     do {
       let imageData = try Data(contentsOf: url)
       image = UIImage(data: imageData)!
